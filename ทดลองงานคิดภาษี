@@ -1,0 +1,21 @@
+def calculate_tax(net_income):
+        t1 = t2 = t3 = t4 = t5 = t6 = t7 = t8 = 0
+          
+        if net_income > 150000:
+         t1 = 0
+            
+         if net_income > 300000:
+            t2 = 150000 * 0.05
+         elif net_income > 150000:
+            t2 = (net_income - 150000) * 0.05
+            
+         if net_income > 500000:
+            t3 = 200000 * 0.10
+         elif net_income > 300000:
+            t3 = (net_income - 300000) * 0.10
+        
+         if net_income > 750000:
+            t4 = 250000 * 0.15
+         elif net_income > 500000:
+            t4 = (net_income - 500000) * 0.15
+
