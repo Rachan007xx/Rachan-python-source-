@@ -37,6 +37,14 @@ def calculate_tax (net_income):
          if net_income > 5000000:
             t8 =(net_income - 5000000)*0.35
 
+         total_tax = t1+ t2+ t3+ t4+ t5+ t6+ t7+ t8
+
+         return total_tax, t1, t2, t3, t4, t5, t6, t7, t8
+
+         income =float(input("กรอกเงิน:"))
+
+         total_tax, t1, t2, t3, t4, t5, t6, t7, t8, calculate_tax(income)
+
 
 
 
