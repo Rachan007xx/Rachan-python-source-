@@ -38,12 +38,34 @@ def calculate_tax (net_income):
             t8 =(net_income - 5000000)*0.35
 
          total_tax = t1+ t2+ t3+ t4+ t5+ t6+ t7+ t8
-
+         
          return total_tax, t1, t2, t3, t4, t5, t6, t7, t8
 
-         income =float(input("กรอกเงิน:"))
+income =float(input("กรอกเงินสุทธิ:"))
 
-         total_tax, t1, t2, t3, t4, t5, t6, t7, t8, calculate_tax(income)
+total_tax, t1, t2, t3, t4, t5, t6, t7, t8 = calculate_tax(income)
+
+remaining_income = income - total_tax
+effective_rate = (total_tax / income ) *100 if income > 0 else 0
+
+print("\nรายละเอียดภาษี\n")
+print(f"0 - 150,000            {t1:,.2f}       บาท") 
+print(f"150,001 - 300,000      {t2:,.2f}       บาท")
+print(f"300,001 - 500,000      {t3:,.2f}       บาท")
+print(f"500,001 - 750,000      {t4:,.2f}       บาท")
+print(f"750,001 - 1,000,000    {t5:,.2f}     บาท")
+print(f"1,000,001 - 2,000,000  {t6:,.2f}   บาท")
+print(f"2,000,001 - 5,000,000  {t7:,.2f}   บาท")
+
+if income > 5000000:
+   print(f"มากกว่า 5,000,000    {t8:,.2f}        บาท")
+print("-"* 40)
+print(f"ภาษีรวม      {total_tax:,.2f}บาท")
+print(f"รายได้หลังหักภาษี {remaining_income:,.2f}บาท")
+print(f"Effective Tax rate = {effective_rate:,.2f}%")
+
+
+
 
 
 

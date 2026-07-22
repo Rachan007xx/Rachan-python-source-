@@ -43,8 +43,36 @@ def calculate_tax(net_income):
        
          income = float(input("กรอกเงินได้สุทธิ:"))
 
-         total_tax ,t1 ,t2 ,t3 ,t4 ,t5 ,t6 ,t7 ,t8 ,calculate_tax(income)
-                    
+         total_tax,t1 ,t2 ,t3 ,t4 ,t5 ,t6 ,t7 ,t8 ,calculate_tax(income) 
+         
+         remaining_income = income - total_tax
+         effective_rate = (income / total_tax ) *100 if income > 0 else 0
 
 
+
+
+
+
+
+
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
                            
