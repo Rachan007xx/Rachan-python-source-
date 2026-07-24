@@ -22,6 +22,17 @@ height = float(input("Enter your height(m) :"))
 BMI = Weight/(height**2)
 print(f"your BMI :{BMI:.2f}")
 
+#BMI Categories
+if BMI < 18.5:
+    print("Your BMI Categories :Underweight")
+elif BMI  >= 18.5 and BMI <= 24.9:
+    print("Your BMI Categories :Normal weight")
+elif BMI  >= 25.0 and BMI <= 29.9:
+    print("Your BMI Categories :Overweight")
+elif BMI >= 30.0:
+    print("Your BMI Categories :Obese")
+
+
 """
 Question 2: Currency Converter (20 points)
 
