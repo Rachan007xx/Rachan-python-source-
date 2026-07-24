@@ -17,7 +17,10 @@ Below 18.5: Underweight
 30.0 and above: Obese
 
 """
-
+Weight = int(input("Enter your weight(kg) :" ))
+height = float(input("Enter your height(m) :"))
+BMI = Weight/(height**2)
+print(f"your BMI :{BMI:.2f}")
 
 """
 Question 2: Currency Converter (20 points)
