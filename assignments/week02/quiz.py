@@ -17,6 +17,23 @@ Below 18.5: Underweight
 30.0 and above: Obese
 
 """
+# BMI Calculator
+
+weight = float(input("Enter your weight in kilograms: "))
+height = float(input("Enter your height in meters: "))
+
+bmi = weight / (height ** 2)
+print(f"Your BMI is: {bmi:.1f}")
+
+if bmi < 18.5:
+    print("Category: Underweight")
+elif 18.5 <= bmi <= 24.9:
+    print("Category: Normal weight")
+elif 25.0 <= bmi <= 29.9:
+    print("Category: Overweight")
+else:
+    print("Category: Obese")
+
 
 
 """
@@ -31,3 +48,23 @@ Use exchange rate: 1 USD = 35.5 THB
 Display result with 2 decimal places
 Show the calculation formula used
 """
+# Currency Converter
+rate = 35.5
+
+print("Choose conversion direction:")
+print("1: THB to USD")
+print("2: USD to THB")
+choice = input("Enter 1 or 2: ")
+
+amount = float(input("Enter the amount: "))
+
+if choice == "1":
+    result = amount / rate
+    print(f"{amount:.2f} THB = {result:.2f} USD")
+    print(f"Formula: USD = THB / {rate}")
+elif choice == "2":
+    result = amount * rate
+    print(f"{amount:.2f} USD = {result:.2f} THB")
+    print(f"Formula: THB = USD × {rate}")
+else:
+    print("Invalid choice. Please enter 1 or 2.")
