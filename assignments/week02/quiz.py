@@ -17,23 +17,21 @@ Below 18.5: Underweight
 30.0 and above: Obese
 
 """
-# BMI Calculator
 
-weight = float(input("Enter your weight in kilograms: "))
-height = float(input("Enter your height in meters: "))
+Weight = int(input("Enter your weight(kg) :" ))
+height = float(input("Enter your height(m) :"))
+BMI = Weight/(height**2)
+print(f"your BMI :{BMI:.2f}")
 
-bmi = weight / (height ** 2)
-print(f"Your BMI is: {bmi:.1f}")
-
-if bmi < 18.5:
-    print("Category: Underweight")
-elif 18.5 <= bmi <= 24.9:
-    print("Category: Normal weight")
-elif 25.0 <= bmi <= 29.9:
-    print("Category: Overweight")
-else:
-    print("Category: Obese")
-
+#BMI Categories
+if BMI < 18.5:
+    print("Your BMI Categories :Underweight")
+elif BMI  >= 18.5 and BMI <= 24.9:
+    print("Your BMI Categories :Normal weight")
+elif BMI  >= 25.0 and BMI <= 29.9:
+    print("Your BMI Categories :Overweight")
+elif BMI >= 30.0:
+    print("Your BMI Categories :Obese")
 
 
 """
