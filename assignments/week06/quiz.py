@@ -28,9 +28,21 @@ return string ที่จัดรูปแบบข้อมูลผู้ใ
 
 """
 
+
+    
 def create_user_profile(username, age=18, premium=False):
     # Your Problem 3 solution
-    pass
+    status = "Premium User" if premium else "Standard User"
+    return f"{username} (age: {age}) - {status}"
+
+
+
+print(create_user_profile("OLE"))
+print(create_user_profile("lisa", 22))
+print(create_user_profile("john", age=30, premium=True))
+
+
+    
 
 """ เขียน function ชื่อ analyze_scores ที่มีคุณสมบัติดังนี้:
 
