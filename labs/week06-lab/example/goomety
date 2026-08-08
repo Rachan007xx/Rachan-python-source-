@@ -1,0 +1,38 @@
+def calculate_triangle_area(height, base ,):
+    """Calculates and displays triangle area"""
+    area = 0.5 * height * base
+    print(f"triangle with height {height} and base {base}")
+    print(f"Area = {height} × {base} = {area}")
+    print()
+
+print("Calculating triangle areas:")
+calculate_triangle_area(5, 3)
+calculate_triangle_area(10, 7)
+
+# จากตัวอย่าง ให้สร้าง function สําหรับวงกลม
+
+import math
+def calculate_circle_area(radius):
+    """Calculates and displays rectangle area"""
+    area = math.pi * (radius ** 2)
+    print(f"circle with radius {radius}")
+    print(f"Area =  {area:.2f}")
+    print()
+
+print("Calculating circle areas:")
+calculate_circle_area(5 )
+calculate_circle_area(10 )
+
+# จากตัวอย่าง ให้เขียน funtion ชื่อ square_rppt(n):
+def square_root(n):
+    return n ** 0.5
+
+print("Using return values in expressions:")
+result = multiply(4, 5) + square(3)
+print(f"multiply(4, 5) + square(3) = {multiply(4, 5)} + {square(3)} = {result}")
+print()
+
+print(f"square root of 25 = {square_root(25)}")
+print()
+
+
