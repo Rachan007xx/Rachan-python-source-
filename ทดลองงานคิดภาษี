@@ -30,7 +30,7 @@ def calculate_tax (net_income):
             t6 =(net_income - 1000000)*0.25
 
          if net_income > 5000000:
-            t7 = 3000000 * 0.30
+             t7 = 3000000 * 0.30
          elif net_income > 2000000:
             t7 =(net_income - 2000000)*0.30
 

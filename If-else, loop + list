@@ -1,0 +1,51 @@
+
+#Assignment 2.1: โปรแกรมเพื่อการตรวจสอบผลการสอบ (exam-score.py)
+# exam-score.py
+
+# สร้าง list ว่างเพื่อเก็บคะแนนนักเรียน
+scores = []
+
+# รับคะแนนนักเรียน 5 คน
+for i in range(5):
+    score = int(input(f"Enter score of student {i+1}: "))
+    scores.append(score)
+
+# ตรวจสอบคะแนนแต่ละคน
+for i in range(5):
+    if scores[i] >= 50:
+        print(f"Student {i+1}: {scores[i]} -> ผ่าน")
+    else:
+        print(f"Student {i+1}: {scores[i]} -> ไม่ผ่าน")
+
+
+
+
+#Assignment 2.2: โปรแกรมช่วยตัดสินใจเลือกซื้อสินค้าภายใต้งบประมาณรวม (buy-notbuy.py)
+# buy-notbuy.py
+
+# รับราคาสินค้า 6 ชิ้น เก็บไว้ใน list
+prices = []
+print("Enter prices of 6 items:")
+for i in range(6):
+    price = int(input(f"Item {i+1}: "))
+    prices.append(price)
+
+# รับงบประมาณรวม
+budget = int(input("\nEnter total budget: "))
+current_total = 0
+bought_items = []
+
+# ตรวจสอบทีละชิ้น
+for i in range(6):
+    if current_total + prices[i] <= budget:
+        current_total += prices[i]
+        bought_items.append(prices[i])
+        print(f"Item {i+1} = {prices[i]} -> buy")
+    else:
+        print(f"Item {i+1} = {prices[i]} -> cannot buy")
+    print(f"Current total = {current_total}\n")
+
+# สรุปผล
+print("Bought items:", bought_items)
+print("Total spent:", current_total)
+print("Remaining budget:", budget - current_total)
