@@ -22,4 +22,38 @@ Highest: 28 C
 Lowest: 19 C
 
 """
-    
+def get_temperature():
+    # กรณีใช้ค่าที่ fix ไว้
+    # Temps = [31, 40, 32, 37, 41, 38, 39]
+
+    # กรณีให้ผู้ใช้กรอกค่าเอง
+    Temps = []
+    days = int(input("กรอกจำนวนวันที่ต้องการวิเคราะห์: "))
+    for i in range(days):
+        temp = int(input(f"กรอกอุณหภูมิวันที่ {i+1}: "))
+        Temps.append(temp)
+    return Temps
+
+def analyze_temps(temp_list):
+    average = sum(temp_list) / len(temp_list)
+    high = max(temp_list)
+    low = min(temp_list)
+    return (average, high, low)
+
+def display_analysis(avg, high, low):
+    print("Temperature Analysis for the week:")
+    print("Average: %.1f C" % avg)
+    print("Highest: %.1f C" % high)
+    print("Lowest: %.1f C" % low)
+
+# เริ่มทำงาน
+temps = get_temperature()
+print("Temperatures:", temps)
+
+result = analyze_temps(temps)
+print("Result tuple:", result)
+
+display_analysis(result[0], result[1], result[2])
+
+
+   
